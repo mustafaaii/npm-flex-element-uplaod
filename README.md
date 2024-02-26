@@ -23,14 +23,8 @@ If you set `api -> ssr:true`, it will wait for a URL to handle file uploads in t
     url: "http://localhost/upload.php",
  }}
 ```
-
+### Example of a PHP script for api post ### <span style="color:#8a2be2;">API->(POST)</span>
 ```php 
-<?php
-Header("Access-Control-Allow-Origin: *");
-Header("Access-Control-Allow-Headers: Content-Type");
-header('Content-Type: application/json; charset=utf-8');
-header('Access-Control-Allow-Credentials; true');
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["flx_file"])) {
     $uploadDir = "./upload/";
     $uploadedFile = $_FILES["flx_file"];
 ```
