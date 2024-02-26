@@ -13,6 +13,9 @@ If you set `api -> ssr:true`, it will wait for a URL to handle file uploads in t
     ssr: true,
     url: "http://localhost/upload.php",
  }}
+```
+
+```php 
 <?php
 Header("Access-Control-Allow-Origin: *");
 Header("Access-Control-Allow-Headers: Content-Type");
@@ -21,10 +24,13 @@ header('Access-Control-Allow-Credentials; true');
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["flx_file"])) {
     $uploadDir = "./upload/";
     $uploadedFile = $_FILES["flx_file"];
-   
+```
+
 # Flex Element Upload
 
-**Flex Element Upload** is a simple and useful npm package that helps you upload files in your projects. It utilizes axios for file upload functionality by simply specifying the upload URL (for example /upload.php). You can set limits for file types, dimensions, and size. It displays information about selected files and allows you to set a limit for the number of uploads. Additionally, it can preview images on the first page load.
+**Flex Element Upload** 
+
+is a simple and useful npm package that helps you upload files in your projects. It utilizes axios for file upload functionality by simply specifying the upload URL (for example /upload.php). You can set limits for file types, dimensions, and size. It displays information about selected files and allows you to set a limit for the number of uploads. Additionally, it can preview images on the first page load.
 
 ## Building Features
 
@@ -68,16 +74,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["flx_file"])) {
 # RESPONSE: OBJECT OR ARRAY
 The response can be either an object or an array, depending on the selection of uploads.
 ## Appearance
+```javascript 
 response={(e) => { console.log(e) }}
+```
 ##Output (OBJECT)
+```javascript 
 {image: '65dbcbec246a0.png', size: '21.78KB', type: 'PNG', pixel: '120X120'}
+```
 ## Output (ARRAY)
+```javascript 
 [
 {image: '65dbcbec246a0.png', size: '21.78KB', type: 'PNG', pixel: '120X120'}
 {image: '65dbcbec2b0f3.png', size: '25.19KB', type: 'PNG', pixel: '120X120'}
 {image: '65dbcbec301de.png', size: '23.05KB', type: 'PNG', pixel: '120X120'}
 {image: '65dbcbec34e7b.png', size: '20.21KB', type: 'PNG', pixel: '120X120'}
 ]
+```
 
 ### PLACEHOLDER: OBJECT
 
