@@ -28,15 +28,15 @@ If you set `api -> ssr:true`, it will wait for a URL to handle file uploads in t
 ```
 ### RESPONSE: OBJECT OR ARRAY
 The response can be either an object or an array, depending on the selection of uploads.
-## Appearance
+#### Appearance
 ```javascript 
 response={(e) => { console.log(e) }}
 ```
-## Output (OBJECT)
+#### Output (OBJECT)
 ```javascript 
 {image: '65dbcbec246a0.png', size: '21.78KB', type: 'PNG', pixel: '120X120'}
 ```
-## Output (ARRAY)
+#### Output (ARRAY)
 ```javascript 
 [
 {image: '65dbcbec246a0.png', size: '21.78KB', type: 'PNG', pixel: '120X120'}
@@ -68,7 +68,7 @@ You can customize the placeholder with an icon, text, and button text.
 ### SELECTED: OBJECT OR ARRAY
 Allows you to view selected and uploaded files again. There are two types of input methods: Object (Single upload) and Array (Multiple upload). The output provides image, size, type, and pixel information. If these values are not available, you can leave them blank.
 
-## Object (Single Upload)
+#### Object (Single Upload)
 ```javascript 
  selected={
      {image: 'http://localhost/upload/65dbabcbe2694.png', 
@@ -77,7 +77,7 @@ Allows you to view selected and uploaded files again. There are two types of inp
      pixel: '120X120' }
  }
 ```
-## Array (Multiple Upload)
+#### Array (Multiple Upload)
 ```javascript 
  selected={[
     {image: 'http://localhost/upload/65dbcbec246a0.png', 
