@@ -1,7 +1,6 @@
-# Flex Element Upload
+**Flex Element Upload** 
 
-**Flex Element Upload** is a simple and useful npm package that helps you upload files in your projects. It utilizes axios for file upload functionality by simply specifying the upload URL (for example /upload.php). You can set limits for file types, dimensions, and size. It displays information about selected files and allows you to set a limit for the number of uploads. Additionally, it can preview images on the first page load.
-
+is a simple and useful npm package that helps you upload files in your projects. It utilizes axios for file upload functionality by simply specifying the upload URL (for example /upload.php). You can set limits for file types, dimensions, and size. It displays information about selected files and allows you to set a limit for the number of uploads. Additionally, it can preview images on the first page load.
 ## Installation
 ```bash
 npm install flex-element-upload
@@ -10,9 +9,7 @@ npm install flex-element-upload
 import { Uplaod } from "flex-element-upload";
 ```
 
-
 ## Building Features
-
 ### API (POST)
 
 If you set `api -> ssr:true`, it will wait for a URL to handle file uploads in the background. Here's an example of how to configure it:
@@ -23,64 +20,19 @@ If you set `api -> ssr:true`, it will wait for a URL to handle file uploads in t
     url: "http://localhost/upload.php",
  }}
 ```
+
 ### Example of a PHP script for api post ### <span style="color:#8a2be2;">API->(POST)</span>
 ```php 
     $uploadDir = "./upload/";
     $uploadedFile = $_FILES["flx_file"];
 ```
-
-# Flex Element Upload
-
-**Flex Element Upload** 
-
-is a simple and useful npm package that helps you upload files in your projects. It utilizes axios for file upload functionality by simply specifying the upload URL (for example /upload.php). You can set limits for file types, dimensions, and size. It displays information about selected files and allows you to set a limit for the number of uploads. Additionally, it can preview images on the first page load.
-
-## Building Features
-
-### API (POST)
-
-If you set `api -> ssr:true`, it will wait for a URL to handle file uploads in the background. Here's an example of how to configure it:
-
-```javascript   
- api={{
-    ssr: true,
-    url: "http://localhost/upload.php",
- }}
-```
-# Example of a PHP script for API POST
-<?php
-Header("Access-Control-Allow-Origin: *");
-Header("Access-Control-Allow-Headers: Content-Type");
-header('Content-Type: application/json; charset=utf-8');
-header('Access-Control-Allow-Credentials; true');
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["flx_file"])) {
-    $uploadDir = "./upload/";
-    $uploadedFile = $_FILES["flx_file"];
-    if ($uploadedFile["error"] == UPLOAD_ERR_OK) {
-        $fileName = basename($uploadedFile["name"]);
-        $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
-        $newFileName = uniqid() . "." . $fileExtension;
-        $uploadPath = $uploadDir . $newFileName;
-        if (move_uploaded_file($uploadedFile["tmp_name"], $uploadPath)) {
-            echo json_encode(["status" => true, "file" => $newFileName]);
-        } else {
-            echo "Error.";
-        }
-    } else {
-        echo "Error: " . $uploadedFile["error"];
-    }
-} else {
-    echo "Error Send.";
-}
-?>
-
-# RESPONSE: OBJECT OR ARRAY
+### RESPONSE: OBJECT OR ARRAY
 The response can be either an object or an array, depending on the selection of uploads.
 ## Appearance
 ```javascript 
 response={(e) => { console.log(e) }}
 ```
-##Output (OBJECT)
+## Output (OBJECT)
 ```javascript 
 {image: '65dbcbec246a0.png', size: '21.78KB', type: 'PNG', pixel: '120X120'}
 ```
@@ -113,7 +65,7 @@ You can customize the placeholder with an icon, text, and button text.
  }
 ```
 
-# SELECTED: OBJECT OR ARRAY
+### SELECTED: OBJECT OR ARRAY
 Allows you to view selected and uploaded files again. There are two types of input methods: Object (Single upload) and Array (Multiple upload). The output provides image, size, type, and pixel information. If these values are not available, you can leave them blank.
 
 ## Object (Single Upload)
@@ -185,7 +137,7 @@ What dimensions (width/height) should the uploaded files be?
 
 How many files can the user
 
-# Usage
+### Usage
 ## Single Upload
 ```javascript  
 <Upload
@@ -214,7 +166,7 @@ How many files can the user
     }}
  />
 ```
-# Multiple Upload
+## Multiple Upload
 ```javascript  
 <Upload
     multiple
@@ -243,7 +195,7 @@ How many files can the user
     }}
  />
 ```
-# Other
+## Other
 __The greatest legacy is the works you will leave to humanity.__
 
 I develop projects to help people. I'm trying to implement many ideas like this.
