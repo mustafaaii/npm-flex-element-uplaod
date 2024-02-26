@@ -102,14 +102,16 @@ You can customize the placeholder with an icon, text, and button text.
 Allows you to view selected and uploaded files again. There are two types of input methods: Object (Single upload) and Array (Multiple upload). The output provides image, size, type, and pixel information. If these values are not available, you can leave them blank.
 
 ## Object (Single Upload)
+```javascript 
  selected={
      {image: 'http://localhost/upload/65dbabcbe2694.png', 
      size: '23.05KB', 
      type: 'png', 
      pixel: '120X120' }
  }
+```
 ## Array (Multiple Upload)
-
+```javascript 
  selected={[
     {image: 'http://localhost/upload/65dbcbec246a0.png', 
     size: '21.78KB', 
@@ -128,7 +130,7 @@ Allows you to view selected and uploaded files again. There are two types of inp
     type: 'PNG', 
     pixel: '120X120'}
  ]}
-
+```
 ### SETTINGS: OBJECT
 
 Settings allow you to toggle features on/off or set limitations.
