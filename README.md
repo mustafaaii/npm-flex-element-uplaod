@@ -170,6 +170,7 @@ How many files can the user
 
 # Usage
 ## Single Upload
+```javascript  
 <Upload
     single
     selected={{
@@ -195,7 +196,9 @@ How many files can the user
         imagePixel: "1080X1080",
     }}
  />
+```
 # Multiple Upload
+```javascript  
 <Upload
     multiple
      selected={[
@@ -222,6 +225,7 @@ How many files can the user
         limit: 5
     }}
  />
+```
 # Other
 __The greatest legacy is the works you will leave to humanity.__
 
