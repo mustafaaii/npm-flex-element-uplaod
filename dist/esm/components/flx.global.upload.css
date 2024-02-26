@@ -1,0 +1,127 @@
+:root {
+    --success-color: #009141;
+    --danger-color: #a52a2a;
+    --flx-color: #4b0082;
+}
+
+
+
+.flx [data-text-color=#4b0082] {
+    color: var(--flx-color);
+}
+
+.flx [data-text-color=success] {
+    color: var(--success-color);
+}
+
+.flx [data-text-color=danger] {
+    color: var(--danger-color)
+}
+
+.flx [data-mr=value] {
+    margin-right: var(--value);
+}
+
+.flx [data-ml=value] {
+    margin-left: var(--value);
+}
+
+.flx [data-width="100%"] {
+    width: 100%;
+}
+
+
+.flx [data-go="highlight-container"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0000001a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-go="highlight-container"].active {
+    opacity: 1;
+    z-index: 1049;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.flx [data-go="highlight-body"] {
+    position: relative;
+    height: 350px;
+    width: 600px;
+    background-color: #fff;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    bottom: -100px;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-go="highlight-body"].active {
+    position: relative;
+    height: 350px;
+    width: 600px;
+    background-color: #fff;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1050;
+    bottom: 0px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+.flx [data-go="highlight-close"] {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-color: #a52a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.flx [data-go="highlight-close"]:hover {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-color: #7a2020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.flx [data-go="highlight-close"] svg {
+    height: 30px;
+    width: 30px;
+    color: #ffffff;
+    fill: #ffffff;
+}
+
+
+

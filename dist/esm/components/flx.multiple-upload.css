@@ -1,0 +1,268 @@
+:root {
+    --container-height: 200px;
+    --danger-background-color: #d40047;
+    --danger-text-color: #d40047;
+    --icon-height: 25px;
+    --icon-width: 25px;
+    --icon-fill-white: #fff;
+}
+
+
+.flx [data-mu="loader"] {
+    width: 0%;
+    height: 5px;
+    background-color: rgb(81, 161, 0);
+}
+
+
+.flx [data-mu="container"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    padding: 5px;
+    border: solid 1px #ccc;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.flx [data-mu="item"] {
+    height: 200px;
+    width: 24%;
+    flex: 0 0 auto;
+    border: solid 1px #ccc;
+    background-color: rgb(243, 243, 243);
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.flx [data-mu="item-close"] {
+    position: absolute;
+    top: -10px;
+    right: 4px;
+    width: 12%;
+    background-color: #c9003c;
+    border: solid 1px #c9003c;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    cursor: pointer;
+}
+
+.flx [data-mu="item-close"].active {
+    position: absolute;
+    top: 4px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-mu="item-close"] svg {
+    height: var(--icon-height);
+    width: var(--icon-width);
+    color: #ffffff;
+    fill: #ffffff;
+}
+
+.flx [data-mu="item-info"] {
+    position: absolute;
+    bottom: -10px;
+    width: 95%;
+    background-color: #ccc;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    transition: all 0.2s ease-in-out;
+    border: solid 1px #ccc;
+}
+
+.flx [data-mu="item-info"].active {
+    position: absolute;
+    bottom: 10px;
+    width: 95%;
+    background-color: #f9f9f9;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.flx [data-mu="item-info-item"] {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    border-right: solid 1px #ccc;
+}
+
+.flx [data-mu="item-info-item-icon"] {
+    width: 75%;
+    height: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    border-left: solid 1px #ccc;
+    background-color: #d40047;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flx [data-mu="item-info-item-icon"] svg {
+    height: 19px;
+    width: 19px;
+    color: #ffffff;
+    fill: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+
+.flx [data-mu="item-body"] {
+    height: 200px;
+}
+
+
+.flx [data-mu="item-empty"] {
+    height: 200px;
+    width: 24%;
+    flex: 0 0 auto;
+    border: dashed 1px #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.flx [data-mu="item-empty-icon"] svg {
+    height: 25px;
+    width: 25px;
+    color: #555555;
+    fill: #555555;
+}
+
+.flx [data-mu="item-empty-text"] {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555555;
+}
+
+.flx [data-mu="button-container"] {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+
+.flx [data-mu="button-body"] {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    bottom: -20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-mu="button-body"].active {
+    opacity: 1;
+    visibility: visible;
+    bottom: 0px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+.flx [data-mu="button"] {
+    height: 35px;
+    width: 120px;
+    background-color: #c9003c;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.flx [data-mu="button"].disabled {
+    height: 35px;
+    width: 120px;
+    background-color: #8a002975;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: none;
+    pointer-events: none;
+}
+
+.flx [data-mu="button"]:hover {
+    height: 35px;
+    width: 120px;
+    background-color: #8a0029;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.flx [data-mu="item-info-error"] {
+    position: absolute;
+    bottom: 10px;
+    width: 95%;
+    background-color: #fff;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    border: solid 1px #ccc;
+}

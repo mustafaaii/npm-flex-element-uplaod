@@ -1,0 +1,294 @@
+:root {
+    --container-height: 200px
+}
+
+
+.flx [data-su="container"] {
+    border: solid 1px #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.flx [data-su="body"] {
+
+    border: dashed 1px #ccc;
+    height: var(--container-height);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-su="body"].disbled {
+    opacity: 0;
+}
+
+
+
+.flx [data-su="info"] {
+    position: relative;
+    width: 100%;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.flx [data-su="info-body"] {
+    position: absolute;
+    width: 90%;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    bottom: -60px;
+    opacity: 0;
+    height: 25px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-su="info-body"].active {
+    bottom: -25px;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-su="info-body"] [data-su="item"]:last-child {
+    border-left: solid 1px #ccc;
+    border-right: none;
+}
+
+.flx [data-su="item"] {
+    width: 100%;
+    padding-left: 5px;
+    border-right: solid 1px #ccc;
+    display: flex;
+    justify-content: center;
+}
+
+
+.flx [data-su="item-icon"] {
+    width: 35%;
+    height: 25px;
+    border-right: none;
+    background-color: #c9003c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.flx [data-su="item-icon"]:hover {
+    width: 35%;
+    height: 25px;
+    border-right: none;
+    background-color: #a80032;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.flx [data-su="item-icon"] svg {
+    height: 19px;
+    width: 19px;
+    color: #ffffff;
+    fill: #ffffff;
+}
+
+.flx [data-su="weight-600"] {
+    font-weight: 600;
+}
+
+.flx [data-su="close-icon"] {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    margin-bottom: -100px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.192) !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-su="close-icon"].active {
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 0px;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-su="close-icon"] svg {
+    height: 40px;
+    width: 40px;
+    color: #3a3a3a;
+    fill: #3a3a3a;
+}
+
+
+.flx [data-su="placeholder"] {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: -120px;
+}
+
+.flx [data-su="placeholder"].active {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 0px;
+}
+
+.flx [data-su="placeholder-icon"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-su="placeholder-icon"] svg {
+    height: 40px;
+    width: 40px;
+    color: #3a3a3a;
+    fill: #3a3a3a;
+}
+
+.flx [data-su="placeholder-text"] {
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.flx [data-su="success-upload"] {
+    position: absolute;
+    width: 100%;
+    height: var(--container-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    visibility: hidden;
+    opacity: 0;
+    bottom: -80px;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-su="success-upload"].active {
+    position: absolute;
+    width: 100%;
+    height: var(--container-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    bottom: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-su="success-upload"] svg {
+    height: 50px;
+    width: 50px;
+    color: #3a3a3a;
+    fill: #3a3a3a;
+}
+
+
+
+
+.flx [data-su="button-container"] {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+
+.flx [data-su="button-body"] {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    bottom: -20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.flx [data-su="button-body"].active {
+    opacity: 1;
+    visibility: visible;
+    bottom: 0px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+.flx [data-su="button"] {
+    height: 35px;
+    width: 120px;
+    background-color: #c9003c;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.flx [data-su="button"]:hover {
+    height: 35px;
+    width: 120px;
+    background-color: #8a0029;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.flx [data-su="item-error"] {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
